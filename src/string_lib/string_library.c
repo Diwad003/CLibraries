@@ -1,4 +1,4 @@
-#include "string_library.h"
+#include "../../include/string_library.h"
 
 int makeStringLowercase(char *string, int sizeOfString)
 {
