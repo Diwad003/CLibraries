@@ -26,16 +26,20 @@ int main(void){
     
     char* data = malloc(100*sizeof(char));
     strcpy(data,"hej 0");
-    list_insert(l, (void*)data, sizeof(data));
+    list_insert(l, (void*)data);
+    data = malloc(100*sizeof(char));
     strcpy(data,"hej 1");
-    list_insert(l, (void*)data, sizeof(data));
+    list_insert(l, (void*)data);
+    data = malloc(100*sizeof(char));
     strcpy(data,"hej 2");
-    list_insert(l, (void*)data, sizeof(data));
+    list_insert(l, (void*)data);
+    data = malloc(100*sizeof(char));
     strcpy(data,"hej 3");
-    list_insert(l, (void*)data, sizeof(data));
+    list_insert(l, (void*)data);
 
     printf("list is empty %d\n", list_is_empty(l));
     
+    data = malloc(100*sizeof(char));
     strcpy(data,"hej 0");
     cell* e = list_find(l, data);
     printf("\n%s",(char*)(e->val));
@@ -43,9 +47,6 @@ int main(void){
     printf("\n");
     print_func(l);
     printf("\n");
-
-    strcpy(data,"hej 0");
-
     print_func(l);
 
     list_destroy(l);

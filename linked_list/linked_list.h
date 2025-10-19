@@ -22,7 +22,7 @@ typedef struct list {
 
 list* list_create(kill_function kill_func, compare_function compare_func);
 int list_is_empty(list* l);
-void list_insert(list* l, void* v, const int v_length);
+void list_insert(list* l, void* v);
 void* list_inspect(cell* p);
 cell* list_start(list* l);
 cell* list_end(list* l);

@@ -21,13 +21,12 @@ int list_is_empty(list* l){
     return (l->head->next == l->tail);
 }
 
-void list_insert(list* l, void* v,const int v_length){
+void list_insert(list* l, void* v){
     cell *prev;
     cell *e = malloc(sizeof(cell));
-    e->val = malloc(v_length);
     
     prev = l->tail->prev;
-    memcpy(e->val, v, v_length-1);
+    e->val = v;
     e->prev = prev;
     e->next = l->tail;
     l->tail->prev = e;
